@@ -13,7 +13,7 @@
             <menu>
                 <item
                     android:id="@+id/nav_acceuil"
-                    android:title="Acceuil" />
+                    android:title="Accueil" />
                 <item
                     android:id="@+id/nav_profil"
                     android:title="Mon profil" />
