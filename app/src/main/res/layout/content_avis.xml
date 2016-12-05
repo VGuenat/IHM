@@ -13,4 +13,99 @@
     tools:context="com.ihm.ihm.Avis"
     tools:showIn="@layout/app_bar_avis">
 
+    <ImageView
+        app:srcCompat="@drawable/louisarmstrong"
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxWidth="1000dp"
+        android:maxHeight="1000dp"
+        android:scaleType="fitCenter"
+        android:layout_marginLeft="3dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Votre avis sur ce concert nous intéresse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2"
+        android:layout_marginTop="18dp"
+        android:id="@+id/textView4" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="18dp"
+        android:id="@+id/ratingBar" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingBar"
+        android:layout_alignEnd="@+id/ratingBar"
+        android:id="@+id/ratingBar2" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingBar2"
+        android:layout_alignEnd="@+id/ratingBar2"
+        android:id="@+id/ratingBar3" />
+
+    <TextView
+        android:text="Jeu de scène"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingBar2"
+        android:layout_alignStart="@+id/textView8"
+        android:layout_marginTop="16dp"
+        android:id="@+id/textView9" />
+
+    <TextView
+        android:text="Ambiance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:id="@+id/textView8"
+        android:layout_below="@+id/ratingBar"
+        android:layout_toEndOf="@+id/textView4" />
+
+    <TextView
+        android:text="Qualité Sonore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        android:layout_marginTop="20dp"
+        android:layout_alignTop="@+id/ratingBar"
+        android:layout_toEndOf="@+id/textView4" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_alignParentStart="true"
+        android:id="@+id/editText2"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/ratingBar3"
+        android:layout_alignEnd="@+id/ratingBar3"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:hint="Ajouter un commentaire"
+        android:inputType="text|textMultiLine"
+         />
+
+    <Button
+        android:text="Valider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_alignBaseline="@+id/editText2"
+        android:layout_alignBottom="@+id/editText2"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/editText2" />
+
 </RelativeLayout>
