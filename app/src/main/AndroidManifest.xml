@@ -21,6 +21,26 @@
         <activity
             android:name=".Conditions_generales"
             android:label="@string/title_activity_conditions_generales"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Mon_profil"
+            android:label="@string/title_activity_mon_profil"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Mon_panier"
+            android:label="@string/title_activity_mon_panier"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Politique_securite"
+            android:label="@string/title_activity_politique_securite"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Mon_historique"
+            android:label="@string/title_activity_mon_historique"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Mes_notifications"
+            android:label="@string/title_activity_mes_notifications"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
