@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Accueil"
-            android:label="@string/title_activity_accueil_test"
+            android:label="@string/title_activity_accueil"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,6 +41,41 @@
         <activity
             android:name=".Mes_notifications"
             android:label="@string/title_activity_mes_notifications"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Recherche"
+            android:label="@string/title_activity_recherche"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Connexion_inscription"
+            android:label="@string/connection_inscription" />
+        <activity
+            android:name=".Resultat_recherche"
+            android:label="@string/title_activity_resultat_recherche"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Artiste"
+            android:label="@string/title_activity_artiste"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Concert"
+            android:label="@string/title_activity_concert"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Achat_billet"
+            android:label="@string/title_activity_achat_billet"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Avis"
+            android:label="@string/title_activity_avis"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Paiement"
+            android:label="@string/title_activity_paiement"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Gerer_artiste"
+            android:label="@string/title_activity_gerer_artiste"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

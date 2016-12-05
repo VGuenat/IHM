@@ -69,7 +69,8 @@ public class Mon_profil extends AppCompatActivity
             Intent i = new Intent(this, Conditions_generales.class);
             startActivity(i);
         } else if (id == R.id.app_bar_search) {
-
+            Intent i = new Intent(this, Recherche.class);
+            startActivity(i);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

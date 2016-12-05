@@ -6,33 +6,31 @@
             android:id="@+id/app_bar_search"
             android:actionViewClass="android.support.v7.widget.SearchView"
             android:icon="@drawable/ic_search_black_24dp"
-            android:title="Rechercher" />
+            android:title="Rechercher __________________" />
     </group>
     <group android:checkableBehavior="single">
-        <item android:title="Menu">
-            <menu>
-                <item
-                    android:id="@+id/nav_acceuil"
-                    android:title="Accueil" />
-                <item
-                    android:id="@+id/nav_profil"
-                    android:title="Mon profil" />
-                <item
-                    android:id="@+id/nav_panier"
-                    android:title="Mon panier" />
-                <item
-                    android:id="@+id/nav_historique"
-                    android:title="Mon historique" />
-                <item
-                    android:id="@+id/nav_notif"
-                    android:title="Mes notifications" />
-                <item
-                    android:id="@+id/nav_politique"
-                    android:title="Politique de sécurité" />
-                <item
-                    android:id="@+id/nav_condition"
-                    android:title="Conditions générales" />
-            </menu>
-        </item>
+        <menu>
+            <item
+                android:id="@+id/nav_acceuil"
+                android:title="@string/title_activity_accueil" />
+            <item
+                android:id="@+id/nav_profil"
+                android:title="@string/title_activity_mon_profil" />
+            <item
+                android:id="@+id/nav_panier"
+                android:title="@string/title_activity_mon_panier" />
+            <item
+                android:id="@+id/nav_historique"
+                android:title="@string/title_activity_mon_historique" />
+            <item
+                android:id="@+id/nav_notif"
+                android:title="@string/title_activity_mes_notifications" />
+            <item
+                android:id="@+id/nav_politique"
+                android:title="@string/title_activity_politique_securite" />
+            <item
+                android:id="@+id/nav_condition"
+                android:title="@string/title_activity_conditions_generales" />
+        </menu>
     </group>
 </menu>

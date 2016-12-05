@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">IHM</string>
+    <string name="app_name">TicketsDealer</string>
+    <string name="contributor">Florian BADENS - Vincent GUENAT</string>
     <string name="title_activity_accueil">Accueil</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -21,4 +22,14 @@ Integer dictum lacus ultricies lectus vehicula, ac faucibus odio pulvinar. Aliqu
     <string name="title_activity_politique_securite">Politique de sécurité</string>
     <string name="title_activity_mon_historique">Mon historique</string>
     <string name="title_activity_mes_notifications">Mes notifications</string>
+    <string name="title_activity_recherche">Recherche</string>
+    <string name="connection_inscription">Connexion/Inscription</string>
+    <string name="title_activity_resultat_recherche">Résultats</string>
+    <string name="title_activity_artiste">Artiste</string>
+    <string name="title_activity_concert">Concert</string>
+    <string name="title_activity_achat_billet">Achat</string>
+    <string name="title_activity_avis">Avis</string>
+    <string name="title_activity_paiement">Paiement</string>
+    <string name="title_activity_gerer_artiste">Gérer les artistes</string>
+    <string name="bouton_recherche">Rechercher</string>
 </resources>
