@@ -2,14 +2,19 @@ package com.ihm.ihm;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Mon_panier extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -21,6 +26,24 @@ public class Mon_panier extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        TextView headerWeek = new TextView(this);
+        headerWeek.setText(R.string.list_header_next_week);
+
+        ListView listViewSemaine = (ListView) findViewById(R.id.liste_panier_semaine);
+        listViewSemaine.addHeaderView(headerWeek);
+        List<ConcertListeItem> itemsSemaine = genererItems();
+        ConcertListeItemAdapter adapterSemaine = new ConcertListeItemAdapter(this,itemsSemaine);
+        listViewSemaine.setAdapter(adapterSemaine);
+
+        TextView headerMonth = new TextView(this);
+        headerMonth.setText(R.string.list_header_next_month);
+
+        ListView listViewMois = (ListView) findViewById(R.id.liste_panier_mois);
+        listViewMois.addHeaderView(headerMonth);
+        List<ConcertListeItem> itemsMois = genererItems();
+        ConcertListeItemAdapter adapterMois = new ConcertListeItemAdapter(this,itemsMois);
+        listViewMois.setAdapter(adapterMois);
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -29,6 +52,15 @@ public class Mon_panier extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    public List<ConcertListeItem> genererItems() {
+        List<ConcertListeItem> liste = new ArrayList<>();
+        liste.add(new ConcertListeItem(R.drawable.memories, "David Ghetto","11/12/2016","Memories"));
+        liste.add(new ConcertListeItem(R.drawable.blue, "Eiffel65","12/12/2016","Blue"));
+        liste.add(new ConcertListeItem(R.drawable.inframan, "Dr Peacock","17/01/2017","Inframan"));
+        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","22/01/2017","S.E.V.R.A.N"));
+        return liste;
     }
 
     @Override
@@ -43,7 +75,7 @@ public class Mon_panier extends AppCompatActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 

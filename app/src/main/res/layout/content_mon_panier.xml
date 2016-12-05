@@ -13,4 +13,21 @@
     tools:context="com.ihm.ihm.Mon_panier"
     tools:showIn="@layout/app_bar_mon_panier">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/liste_panier_semaine" />
+
+        <ListView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/liste_panier_mois" />
+    </LinearLayout>
 </RelativeLayout>

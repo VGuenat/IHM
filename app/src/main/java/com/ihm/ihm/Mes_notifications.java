@@ -10,6 +10,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Mes_notifications extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -21,6 +26,15 @@ public class Mes_notifications extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        TextView header = new TextView(this);
+        header.setText(R.string.list_header_notifications);
+
+        ListView listView = (ListView) findViewById(R.id.liste_notifications);
+        listView.addHeaderView(header);
+        List<ConcertListeItem> items = genererItems();
+        ConcertListeItemAdapter adapter = new ConcertListeItemAdapter(this,items);
+        listView.setAdapter(adapter);
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -29,6 +43,15 @@ public class Mes_notifications extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    public List<ConcertListeItem> genererItems() {
+        List<ConcertListeItem> liste = new ArrayList<ConcertListeItem>();
+        liste.add(new ConcertListeItem(R.drawable.memories, "David Ghetto","11/12/2016","Memories"));
+        liste.add(new ConcertListeItem(R.drawable.blue, "Eiffel65","12/12/2016","Blue"));
+        liste.add(new ConcertListeItem(R.drawable.inframan, "Dr Peacock","17/01/2017","Inframan"));
+        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","22/01/2017","S.E.V.R.A.N"));
+        return liste;
     }
 
     @Override

@@ -17,19 +17,41 @@ Cras non turpis vehicula, cursus ante ac, tempor purus. Suspendisse porttitor ni
 Integer dictum lacus ultricies lectus vehicula, ac faucibus odio pulvinar. Aliquam erat volutpat. Pellentesque tempor leo neque, eu rhoncus felis posuere consequat. Morbi faucibus, nibh in tempor placerat, odio tortor feugiat purus, vitae pharetra est augue ac sem. Aenean sit amet erat posuere, pulvinar ante at, imperdiet mi. Sed varius ex at purus commodo, eget vulputate metus auctor. In ac dui posuere, laoreet lacus sed, pharetra dui. Fusce egestas quis neque vel pulvinar. Nulla non lacus a nunc bibendum commodo. Nam et volutpat turpis. Suspendisse in tortor dui. Pellentesque eros urna, mollis auctor hendrerit eget, placerat a nisi. Ut pulvinar vitae leo nec sollicitudin. Nunc eget odio a tortor faucibus vulputate at et est. Donec sodales et dolor in bibendum. Aliquam dictum, augue sit amet auctor blandit, nisl urna malesuada sem, nec vestibulum justo turpis et libero.
     </string>
     <string name="le_bouton">Le bouton</string>
+
     <string name="title_activity_mon_profil">Mon profil</string>
+
     <string name="title_activity_mon_panier">Mon panier</string>
+    <string name="list_header_next_week">La semaine prochaine</string>
+    <string name="list_header_next_month">Le mois prochain</string>
+    <string name="contentDescription">Image choisie pour représenter le concert</string>
+
     <string name="title_activity_politique_securite">Politique de sécurité</string>
+
     <string name="title_activity_mon_historique">Mon historique</string>
+    <string name="list_header_historique">Historique de vos concerts</string>
+
     <string name="title_activity_mes_notifications">Mes notifications</string>
+    <string name="list_header_notifications">Donnez-nous votre avis sur ces concerts :</string>
+
     <string name="title_activity_recherche">Recherche</string>
+
     <string name="connection_inscription">Connexion/Inscription</string>
+
     <string name="title_activity_resultat_recherche">Résultats</string>
+    <string name="list_header_region">Dans votre région</string>
+    <string name="list_header_france">En France</string>
+
     <string name="title_activity_artiste">Artiste</string>
+
     <string name="title_activity_concert">Concert</string>
+
     <string name="title_activity_achat_billet">Achat</string>
+
     <string name="title_activity_avis">Avis</string>
+
     <string name="title_activity_paiement">Paiement</string>
+
     <string name="title_activity_gerer_artiste">Gérer les artistes</string>
+
     <string name="bouton_recherche">Rechercher</string>
 </resources>

@@ -2,9 +2,6 @@ package com.ihm.ihm;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,6 +10,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Resultat_recherche extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -24,6 +26,24 @@ public class Resultat_recherche extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        TextView headerRegion = new TextView(this);
+        headerRegion.setText(R.string.list_header_region);
+
+        ListView listViewRegion = (ListView) findViewById(R.id.liste_resultats_region);
+        listViewRegion.addHeaderView(headerRegion);
+        List<ConcertListeItem> itemsRegion = genererItems();
+        ConcertListeItemAdapter adapterRegion = new ConcertListeItemAdapter(this, itemsRegion);
+        listViewRegion.setAdapter(adapterRegion);
+
+        TextView headerFrance = new TextView(this);
+        headerFrance.setText(R.string.list_header_france);
+
+        ListView listViewFrance = (ListView) findViewById(R.id.liste_resultats_france);
+        listViewFrance.addHeaderView(headerFrance);
+        List<ConcertListeItem> itemsFrance = genererItems();
+        ConcertListeItemAdapter adapterFrance = new ConcertListeItemAdapter(this,itemsFrance);
+        listViewFrance.setAdapter(adapterFrance);
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -32,6 +52,15 @@ public class Resultat_recherche extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    public List<ConcertListeItem> genererItems() {
+        List<ConcertListeItem> liste = new ArrayList<ConcertListeItem>();
+        liste.add(new ConcertListeItem(R.drawable.memories, "David Ghetto","11/12/2016","Memories"));
+        liste.add(new ConcertListeItem(R.drawable.blue, "Eiffel65","12/12/2016","Blue"));
+        liste.add(new ConcertListeItem(R.drawable.inframan, "Dr Peacock","17/01/2017","Inframan"));
+        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","22/01/2017","S.E.V.R.A.N"));
+        return liste;
     }
 
     @Override

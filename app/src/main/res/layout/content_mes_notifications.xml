@@ -13,4 +13,11 @@
     tools:context="com.ihm.ihm.Mes_notifications"
     tools:showIn="@layout/app_bar_mes_notifications">
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/liste_notifications"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>

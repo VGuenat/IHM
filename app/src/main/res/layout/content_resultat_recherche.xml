@@ -13,4 +13,24 @@
     tools:context="com.ihm.ihm.Resultat_recherche"
     tools:showIn="@layout/app_bar_resultat_recherche">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <ListView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/liste_resultats_region" />
+
+        <ListView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/liste_resultats_france" />
+    </LinearLayout>
+
 </RelativeLayout>
