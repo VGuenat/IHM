@@ -11,6 +11,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Accueil extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -22,6 +27,23 @@ public class Accueil extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        ListView listView = (ListView) findViewById(R.id.liste_notifications);
+//        listView.addHeaderView(header);
+        List<ConcertListeItem> items = genererItems();
+
+        ConcertListeItemAdapter adapter = new ConcertListeItemAdapter(this,items);
+        listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent i = new Intent(Accueil.this, Artiste.class);
+                startActivity(i);
+            }
+        });
+
+
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -30,6 +52,15 @@ public class Accueil extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    public List<ConcertListeItem> genererItems() {
+        List<ConcertListeItem> liste = new ArrayList<ConcertListeItem>();
+        liste.add(new ConcertListeItem(R.drawable.memories, "David Ghetto","11/12/2016","Memories"));
+        liste.add(new ConcertListeItem(R.drawable.blue, "Eiffel65","12/12/2016","Blue"));
+        liste.add(new ConcertListeItem(R.drawable.inframan, "Dr Peacock","17/01/2017","Inframan"));
+        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","22/01/2017","S.E.V.R.A.N"));
+        return liste;
     }
 
     @Override
@@ -104,7 +135,7 @@ public class Accueil extends AppCompatActivity
     }
 
     public void vers_resultats (View view) {
-        Intent i = new Intent(this, Artiste.class);
+        Intent i = new Intent(this, Concert.class);
         startActivity(i);
     }
 }
