@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/app_bar_search"
             android:actionViewClass="android.support.v7.widget.SearchView"
             android:icon="@drawable/ic_search_black_24dp"
-            android:title="Rechercher __________________" />
+            android:title="Rechercher" />
     </group>
-    <group android:checkableBehavior="single">
-        <menu>
+
+    <group
+        android:id="@+id/group"
+        android:enabled="true"
+        android:checkableBehavior="single">
+
             <item
                 android:id="@+id/nav_acceuil"
                 android:title="@string/title_activity_accueil" />
@@ -31,6 +36,6 @@
             <item
                 android:id="@+id/nav_condition"
                 android:title="@string/title_activity_conditions_generales" />
-        </menu>
+
     </group>
 </menu>
