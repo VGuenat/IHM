@@ -17,8 +17,95 @@
         android:text="@string/bouton_recherche"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
         android:id="@+id/bouton_recherche"
-        android:onClick="vers_resultats" />
+        android:onClick="vers_resultats"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp" />
+
+    <TextView
+        android:text="Smart Search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="14dp"
+        android:id="@+id/textView3" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/recherche_smart" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="19dp"
+        android:id="@+id/recherche_smart"
+        android:hint="Artiste, concert, date"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/recherche_smart"
+        android:layout_alignStart="@+id/recherche_smart"
+        android:layout_marginTop="84dp"
+        android:id="@+id/recherche_artiste"
+        android:onClick="vers"
+        android:hint="Par artiste" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/recherche_artiste"
+        android:layout_alignEnd="@+id/recherche_artiste"
+        android:layout_marginTop="22dp"
+        android:id="@+id/recherche_genre"
+        android:hint="Par genre" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/recherche_date_debut"
+        android:layout_above="@+id/recherche_date_fin"
+        android:layout_alignStart="@+id/recherche_genre"
+        android:layout_marginBottom="20dp"
+        android:hint="Date de début"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/recherche_date_fin"
+        android:layout_above="@+id/bouton_recherche"
+        android:layout_alignStart="@+id/recherche_date_debut"
+        android:hint="Date de fin"
+
+         />
+
+    <TextView
+        android:text="Recherche approfondie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recherche_smart"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginTop="54dp"
+        android:id="@+id/textView6" />
+
 </RelativeLayout>
