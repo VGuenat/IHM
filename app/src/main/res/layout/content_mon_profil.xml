@@ -13,4 +13,96 @@
     tools:context="com.ihm.ihm.Mon_profil"
     tools:showIn="@layout/app_bar_mon_profil">
 
+    <TextView
+        android:text="Mon profil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView19"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/textView19"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:id="@+id/editText"
+        android:hint="Prénom" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/editText4"
+        android:layout_alignStart="@+id/editText4"
+        android:layout_marginTop="11dp"
+        android:id="@+id/editText5"
+        android:inputType="textPassword"
+        android:hint="Mot de passe" />
+
+    <SeekBar
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="2"
+        android:id="@+id/seekBar"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/textView20"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Périmètre de recherche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textView20"
+        android:layout_below="@+id/editText5"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar"
+        android:layout_toEndOf="@+id/textView19"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="11dp"
+        android:id="@+id/textView21"
+        android:text="km" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText4"
+        android:layout_below="@+id/editText3"
+        android:layout_alignStart="@+id/editText3"
+        android:hint="E-mail" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText3"
+        android:layout_below="@+id/editText"
+        android:layout_alignStart="@+id/editText"
+        android:hint="Nom" />
+
+    <Switch
+        android:text="Accessiblité"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView21"
+        android:layout_toStartOf="@+id/textView21"
+        android:layout_marginEnd="38dp"
+        android:layout_marginTop="11dp"
+        android:id="@+id/switch1" />
+
 </RelativeLayout>

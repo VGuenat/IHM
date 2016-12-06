@@ -104,7 +104,7 @@ public class Accueil extends AppCompatActivity
     }
 
     public void vers_resultats (View view) {
-        Intent i = new Intent(this, Achat_billet.class);
+        Intent i = new Intent(this, Mon_profil.class);
         startActivity(i);
     }
 }
