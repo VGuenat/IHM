@@ -26,11 +26,7 @@ public class Mon_historique extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        TextView header = new TextView(this);
-        header.setText(R.string.list_header_historique);
-
         ListView listView = (ListView) findViewById(R.id.liste_historique);
-        listView.addHeaderView(header);
         List<ConcertListeItem> items = genererItems();
         ConcertListeItemAdapter adapter = new ConcertListeItemAdapter(this,items);
         listView.setAdapter(adapter);
@@ -55,6 +51,13 @@ public class Mon_historique extends AppCompatActivity
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_connecte, menu);
+        return true;
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -62,7 +65,14 @@ public class Mon_historique extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_mon_profil) {
+            Intent i = new Intent(this, Mon_profil.class);
+            startActivity(i);
+            return true;
+        }
+        else if (id == R.id.action_rechercher) {
+            Intent i = new Intent(this, Recherche.class);
+            startActivity(i);
             return true;
         }
 

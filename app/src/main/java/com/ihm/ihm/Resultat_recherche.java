@@ -26,20 +26,20 @@ public class Resultat_recherche extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        TextView headerRegion = new TextView(this);
-        headerRegion.setText(R.string.list_header_region);
+//        TextView headerRegion = new TextView(this);
+//        headerRegion.setText(R.string.list_header_region);
 
         ListView listViewRegion = (ListView) findViewById(R.id.liste_resultats_region);
-        listViewRegion.addHeaderView(headerRegion);
+//        listViewRegion.addHeaderView(headerRegion);
         List<ConcertListeItem> itemsRegion = genererItems();
         ConcertListeItemAdapter adapterRegion = new ConcertListeItemAdapter(this, itemsRegion);
         listViewRegion.setAdapter(adapterRegion);
 
-        TextView headerFrance = new TextView(this);
-        headerFrance.setText(R.string.list_header_france);
+//        TextView headerFrance = new TextView(this);
+//        headerFrance.setText(R.string.list_header_france);
 
         ListView listViewFrance = (ListView) findViewById(R.id.liste_resultats_france);
-        listViewFrance.addHeaderView(headerFrance);
+//        listViewFrance.addHeaderView(headerFrance);
         List<ConcertListeItem> itemsFrance = genererItems();
         ConcertListeItemAdapter adapterFrance = new ConcertListeItemAdapter(this,itemsFrance);
         listViewFrance.setAdapter(adapterFrance);
@@ -76,7 +76,7 @@ public class Resultat_recherche extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.resultat_recherche, menu);
+        getMenuInflater().inflate(R.menu.accueil, menu);
         return true;
     }
 
@@ -88,7 +88,14 @@ public class Resultat_recherche extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_mon_profil) {
+            Intent i = new Intent(this, Mon_profil.class);
+            startActivity(i);
+            return true;
+        }
+        else if (id == R.id.action_rechercher) {
+            Intent i = new Intent(this, Recherche.class);
+            startActivity(i);
             return true;
         }
 

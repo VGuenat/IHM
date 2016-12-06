@@ -26,11 +26,11 @@ public class Mes_notifications extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        TextView header = new TextView(this);
-        header.setText(R.string.list_header_notifications);
+//        TextView header = new TextView(this);
+//        header.setText(R.string.list_header_notifications);
 
         ListView listView = (ListView) findViewById(R.id.liste_notifications);
-        listView.addHeaderView(header);
+//        listView.addHeaderView(header);
         List<ConcertListeItem> items = genererItems();
         ConcertListeItemAdapter adapter = new ConcertListeItemAdapter(this,items);
         listView.setAdapter(adapter);
@@ -52,6 +52,35 @@ public class Mes_notifications extends AppCompatActivity
         liste.add(new ConcertListeItem(R.drawable.inframan, "Dr Peacock","17/01/2017","Inframan"));
         liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","22/01/2017","S.E.V.R.A.N"));
         return liste;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_connecte, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_mon_profil) {
+            Intent i = new Intent(this, Mon_profil.class);
+            startActivity(i);
+            return true;
+        }
+        else if (id == R.id.action_rechercher) {
+            Intent i = new Intent(this, Recherche.class);
+            startActivity(i);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

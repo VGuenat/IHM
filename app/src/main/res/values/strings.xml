@@ -53,5 +53,8 @@ Integer dictum lacus ultricies lectus vehicula, ac faucibus odio pulvinar. Aliqu
 
     <string name="title_activity_gerer_artiste">Gérer les artistes</string>
 
+    <string name="action_mon_profil">Mon profil</string>
+    <string name="action_rechercher">Rechercher un concert</string>
+
     <string name="bouton_recherche">Rechercher</string>
 </resources>
