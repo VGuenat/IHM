@@ -10,6 +10,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
 public class Mon_profil extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,6 +33,26 @@ public class Mon_profil extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        final SeekBar sk=(SeekBar) findViewById(R.id.seekBar);
+
+        sk.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                final TextView seekText =(TextView) findViewById(R.id.textView21);
+                seekText.setText(progress + " km");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
     }
 
     @Override
@@ -105,5 +129,19 @@ public class Mon_profil extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void vers_paiement (View view) {
+        Intent i = new Intent(this, Paiement.class);
+        startActivity(i);
+    }
+
+    public void vers_accueil (View view) {
+        Intent i = new Intent(this, Accueil.class);
+        startActivity(i);
+    }
+    public void vers_gerer_artiste (View view) {
+        Intent i = new Intent(this, Gerer_artiste.class);
+        startActivity(i);
     }
 }
