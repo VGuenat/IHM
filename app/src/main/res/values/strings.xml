@@ -57,4 +57,21 @@ Integer dictum lacus ultricies lectus vehicula, ac faucibus odio pulvinar. Aliqu
     <string name="action_rechercher">Rechercher un concert</string>
 
     <string name="bouton_recherche">Rechercher</string>
+
+    <string-array name="spinnerItems">
+        <item>Fosse</item>
+        <item>Zone A</item>
+        <item>Zone B</item>
+        <item>Zone C</item>
+    </string-array>
+
+    <string-array name="quantitespinner">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
 </resources>
