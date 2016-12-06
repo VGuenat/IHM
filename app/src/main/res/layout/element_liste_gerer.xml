@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/contentDescription"
+        tools:background="#AAA"
+        />
+
+    <TextView
+        android:id="@+id/artiste_present"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold"
+        tools:text="Artiste"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/avatar"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:text="Ne plus suivre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button11"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_marginEnd="12dp"
+        android:layout_alignBaseline="@+id/artiste_present"
+        android:layout_alignBottom="@+id/artiste_present"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

@@ -13,6 +13,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Gerer_artiste extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -24,6 +28,12 @@ public class Gerer_artiste extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        ListView listView = (ListView) findViewById(R.id.liste_notifications);
+//        listView.addHeaderView(header);
+        List<GererListeItem> items = genererItems();
+        GererListeItemAdapter adapter = new GererListeItemAdapter(this,items);
+        listView.setAdapter(adapter);
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -32,6 +42,15 @@ public class Gerer_artiste extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    public List<GererListeItem> genererItems() {
+        List<GererListeItem> liste = new ArrayList<GererListeItem>();
+        liste.add(new GererListeItem(R.drawable.memories, "David Ghetto"));
+        liste.add(new GererListeItem(R.drawable.blue, "Eiffel65"));
+        liste.add(new GererListeItem(R.drawable.inframan, "Dr Peacock"));
+        liste.add(new GererListeItem(R.drawable.sevran, "Kaaris"));
+        return liste;
     }
 
     @Override
