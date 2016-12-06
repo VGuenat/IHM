@@ -104,7 +104,7 @@ public class Accueil extends AppCompatActivity
     }
 
     public void vers_resultats (View view) {
-        Intent i = new Intent(this, Mon_profil.class);
+        Intent i = new Intent(this, Artiste.class);
         startActivity(i);
     }
 }

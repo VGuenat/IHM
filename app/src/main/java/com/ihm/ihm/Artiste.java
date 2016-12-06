@@ -13,6 +13,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Artiste extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -24,6 +28,21 @@ public class Artiste extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        ListView listViewRegion = (ListView) findViewById(R.id.liste_resultats_region);
+//        listViewRegion.addHeaderView(headerRegion);
+        List<ConcertListeItem> itemsRegion = genererItemsRegion();
+        ConcertListeItemAdapter adapterRegion = new ConcertListeItemAdapter(this, itemsRegion);
+        listViewRegion.setAdapter(adapterRegion);
+
+//        TextView headerFrance = new TextView(this);
+//        headerFrance.setText(R.string.list_header_france);
+
+        ListView listViewFrance = (ListView) findViewById(R.id.liste_resultats_france);
+//        listViewFrance.addHeaderView(headerFrance);
+        List<ConcertListeItem> itemsFrance = genererItemsFrance();
+        ConcertListeItemAdapter adapterFrance = new ConcertListeItemAdapter(this,itemsFrance);
+        listViewFrance.setAdapter(adapterFrance);
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -34,6 +53,21 @@ public class Artiste extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+
+    public List<ConcertListeItem> genererItemsRegion() {
+        List<ConcertListeItem> liste = new ArrayList<ConcertListeItem>();
+        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","22/01/2017","S.E.V.R.A.N"));
+        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","23/03/2017","S.E.V.R.A.N"));
+        return liste;
+    }
+    public List<ConcertListeItem> genererItemsFrance() {
+        List<ConcertListeItem> liste = new ArrayList<ConcertListeItem>();
+        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","22/01/2017","S.E.V.R.A.N"));
+        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","23/03/2017","S.E.V.R.A.N"));
+        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","24/04/2017","S.E.V.R.A.N"));
+        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","25/06/2017","S.E.V.R.A.N"));
+        return liste;
+    }
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
