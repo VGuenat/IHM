@@ -1,5 +1,6 @@
 package com.ihm.ihm;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Mon_profil extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -137,6 +139,12 @@ public class Mon_profil extends AppCompatActivity
     }
 
     public void vers_accueil (View view) {
+        Context context = getApplicationContext();
+        CharSequence text = "Modifications enregistrées !";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
         Intent i = new Intent(this, Accueil.class);
         startActivity(i);
     }
