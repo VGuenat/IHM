@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -52,14 +54,31 @@ public class Resultat_recherche extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        listViewFrance.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent i = new Intent(Resultat_recherche.this, Concert.class);
+                startActivity(i);
+            }
+        });
+
+        listViewRegion.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent i = new Intent(Resultat_recherche.this, Concert.class);
+                startActivity(i);
+            }
+        });
     }
 
     public List<ConcertListeItem> genererItems() {
         List<ConcertListeItem> liste = new ArrayList<ConcertListeItem>();
-        liste.add(new ConcertListeItem(R.drawable.memories, "David Ghetto","11/12/2016","Memories"));
-        liste.add(new ConcertListeItem(R.drawable.blue, "Eiffel65","12/12/2016","Blue"));
-        liste.add(new ConcertListeItem(R.drawable.inframan, "Dr Peacock","17/01/2017","Inframan"));
-        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","22/01/2017","S.E.V.R.A.N"));
+        liste.add(new ConcertListeItem(R.drawable.memories, "David Ghetto","11/12/2016","Toulouse"));
+        liste.add(new ConcertListeItem(R.drawable.blue, "Eiffel65","12/12/2016","Rambouillet"));
+        liste.add(new ConcertListeItem(R.drawable.inframan, "Dr Peacock","17/01/2017","Alzonne"));
+        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","22/01/2017","Les Beaudottes"));
         return liste;
     }
 

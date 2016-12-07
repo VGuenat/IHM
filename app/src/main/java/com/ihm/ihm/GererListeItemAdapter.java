@@ -1,11 +1,13 @@
 package com.ihm.ihm;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -35,10 +37,14 @@ class GererListeItemAdapter extends ArrayAdapter<GererListeItem> {
 
         GererListeItem item = getItem(position);
 
+
+
         assert item != null;
         viewHolder.artiste_present.setText(item.getArtiste());
         viewHolder.avatar.setImageResource(item.getImage());
         return convertView;
+
+
     }
 
     private class GererListItemViewHolder {

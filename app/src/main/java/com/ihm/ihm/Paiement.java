@@ -1,5 +1,6 @@
 package com.ihm.ihm;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -15,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.Toast;
 
 import butterknife.ButterKnife;
 import butterknife.OnTextChanged;
@@ -56,6 +58,12 @@ public class Paiement extends AppCompatActivity
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Context context = getApplicationContext();
+                CharSequence text = "Billet acheté !";
+                int duration = Toast.LENGTH_SHORT;
+
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
                 Intent i = new Intent(Paiement.this, Accueil.class);
                 startActivity(i);
             }
@@ -66,6 +74,12 @@ public class Paiement extends AppCompatActivity
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Context context = getApplicationContext();
+                CharSequence text = "Billet acheté !";
+                int duration = Toast.LENGTH_SHORT;
+
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
                 Intent i = new Intent(Paiement.this, Accueil.class);
                 startActivity(i);
             }
@@ -76,6 +90,12 @@ public class Paiement extends AppCompatActivity
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Context context = getApplicationContext();
+                CharSequence text = "Carte ajoutée et billet acheté !";
+                int duration = Toast.LENGTH_SHORT;
+
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
                 Intent i = new Intent(Paiement.this, Accueil.class);
                 startActivity(i);
             }
