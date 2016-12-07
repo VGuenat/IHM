@@ -56,10 +56,10 @@ public class Accueil extends AppCompatActivity
 
     public List<ConcertListeItem> genererItems() {
         List<ConcertListeItem> liste = new ArrayList<ConcertListeItem>();
-        liste.add(new ConcertListeItem(R.drawable.memories, "David Ghetto","11/12/2016","Memories"));
-        liste.add(new ConcertListeItem(R.drawable.blue, "Eiffel65","12/12/2016","Blue"));
-        liste.add(new ConcertListeItem(R.drawable.inframan, "Dr Peacock","17/01/2017","Inframan"));
-        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","22/01/2017","S.E.V.R.A.N"));
+        liste.add(new ConcertListeItem(R.drawable.memories, "David Ghetto","11/12/2016","Toulouse"));
+        liste.add(new ConcertListeItem(R.drawable.blue, "Eiffel65","12/12/2016","Rambouillet"));
+        liste.add(new ConcertListeItem(R.drawable.inframan, "Dr Peacock","17/01/2017","Alzonne"));
+        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","22/01/2017","Les Beaudottes"));
         return liste;
     }
 

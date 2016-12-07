@@ -48,7 +48,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/button_connexion"
         android:layout_below="@+id/input_connexion_password"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        />
 
 
     <View
@@ -95,7 +96,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/input_inscription_email"
         android:layout_centerHorizontal="true"
-        android:id="@+id/button3" />
+        android:id="@+id/button3"
+         />
 
     <EditText
         android:layout_width="wrap_content"

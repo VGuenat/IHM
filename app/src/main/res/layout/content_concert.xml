@@ -31,7 +31,8 @@
         android:layout_below="@+id/imageView4"
         android:id="@+id/button12"
         android:layout_alignStart="@+id/imageView4"
-        android:layout_alignEnd="@+id/imageView4" />
+        android:layout_alignEnd="@+id/imageView4"
+         />
 
     <TextView
         android:text="Informations sur le concert et sur la salle"
@@ -69,8 +70,7 @@
         android:id="@+id/button"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:onClick="vers_avis (Concert)" />
+        style="@style/Widget.AppCompat.Button.Borderless"/>
 
     <ListView
         android:layout_width="match_parent"
