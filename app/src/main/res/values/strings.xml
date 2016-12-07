@@ -38,7 +38,7 @@ Integer dictum lacus ultricies lectus vehicula, ac faucibus odio pulvinar. Aliqu
     <string name="connection_inscription">Connexion/Inscription</string>
 
     <string name="title_activity_resultat_recherche">Résultats</string>
-    <string name="list_header_region">Dans votre région</string>
+    <string name="list_header_resultats">Dans votre région</string>
     <string name="list_header_france">En France</string>
 
     <string name="title_activity_artiste">Artiste</string>

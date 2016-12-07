@@ -2,9 +2,6 @@ package com.ihm.ihm;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -28,7 +25,7 @@ public class Artiste extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        ListView listViewRegion = (ListView) findViewById(R.id.liste_resultats_region);
+        ListView listViewRegion = (ListView) findViewById(R.id.liste_resultats);
 //        listViewRegion.addHeaderView(headerRegion);
         List<ConcertListeItem> itemsRegion = genererItemsRegion();
         ConcertListeItemAdapter adapterRegion = new ConcertListeItemAdapter(this, itemsRegion);

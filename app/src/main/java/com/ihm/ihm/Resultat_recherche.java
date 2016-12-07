@@ -26,23 +26,15 @@ public class Resultat_recherche extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-//        TextView headerRegion = new TextView(this);
-//        headerRegion.setText(R.string.list_header_region);
+        TextView header = new TextView(this);
+        header.setText(R.string.list_header_resultats);
 
-        ListView listViewRegion = (ListView) findViewById(R.id.liste_resultats_region);
-//        listViewRegion.addHeaderView(headerRegion);
-        List<ConcertListeItem> itemsRegion = genererItems();
-        ConcertListeItemAdapter adapterRegion = new ConcertListeItemAdapter(this, itemsRegion);
-        listViewRegion.setAdapter(adapterRegion);
+        ListView listView = (ListView) findViewById(R.id.liste_resultats);
+        listView.addHeaderView(header);
+        List<ConcertListeItem> items = genererItems();
+        ConcertListeItemAdapter adapter = new ConcertListeItemAdapter(this, items);
+        listView.setAdapter(adapter);
 
-//        TextView headerFrance = new TextView(this);
-//        headerFrance.setText(R.string.list_header_france);
-
-        ListView listViewFrance = (ListView) findViewById(R.id.liste_resultats_france);
-//        listViewFrance.addHeaderView(headerFrance);
-        List<ConcertListeItem> itemsFrance = genererItems();
-        ConcertListeItemAdapter adapterFrance = new ConcertListeItemAdapter(this,itemsFrance);
-        listViewFrance.setAdapter(adapterFrance);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -76,7 +68,7 @@ public class Resultat_recherche extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.accueil, menu);
+        getMenuInflater().inflate(R.menu.menu_connecte, menu);
         return true;
     }
 
