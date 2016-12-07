@@ -13,6 +13,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Concert extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -24,6 +28,12 @@ public class Concert extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        ListView listView = (ListView) findViewById(R.id.liste_commentaire);
+//        listView.addHeaderView(header);
+        List<AvisListeItem> items = genererItems();
+        AvisListeItemAdapter adapter = new AvisListeItemAdapter(this,items);
+        listView.setAdapter(adapter);
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -34,6 +44,14 @@ public class Concert extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+
+    public List<AvisListeItem> genererItems() {
+        List<AvisListeItem> liste = new ArrayList<AvisListeItem>();
+        liste.add(new AvisListeItem(R.drawable.profil, "Jean-Jacques", "Vraiment trop bien !"));
+        liste.add(new AvisListeItem(R.drawable.profil, "Marie29", "Au top !"));
+        liste.add(new AvisListeItem(R.drawable.profil, "Bernardo", "Trop nul, j'ai pas aimé !"));
+        return liste;
+    }
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -108,5 +126,9 @@ public class Concert extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    public void vers_avis (View view) {
+        Intent i = new Intent(this, Avis.class);
+        startActivity(i);
     }
 }
