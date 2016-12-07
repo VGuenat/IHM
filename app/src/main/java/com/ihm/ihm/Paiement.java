@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 import butterknife.ButterKnife;
 import butterknife.OnTextChanged;
@@ -49,6 +50,36 @@ public class Paiement extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        Button btn = (Button) findViewById(R.id.button5);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Paiement.this, Accueil.class);
+                startActivity(i);
+            }
+        });
+
+        Button btn2 = (Button) findViewById(R.id.button6);
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Paiement.this, Accueil.class);
+                startActivity(i);
+            }
+        });
+
+        Button btn3 = (Button) findViewById(R.id.button8);
+
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Paiement.this, Accueil.class);
+                startActivity(i);
+            }
+        });
     }
 
     @Override
@@ -187,4 +218,24 @@ public class Paiement extends AppCompatActivity
         }
         return digits;
     }
+
+    public void vers_retour (View view) {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }}
+
+    public void vers_accueil (View view) {
+        Intent i = new Intent(this, Accueil.class);
+        startActivity(i);
+    }
+
+    public void vers_accueil2 (View view) {
+        Intent i = new Intent(this, Accueil.class);
+        startActivity(i);
+    }
+
+
 }

@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -51,21 +52,37 @@ public class Artiste extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        listViewFrance.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent i = new Intent(Artiste.this, Concert.class);
+                startActivity(i);
+            }
+        });
+
+        listViewRegion.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent i = new Intent(Artiste.this, Concert.class);
+                startActivity(i);
+            }
+        });
     }
 
 
     public List<ConcertListeItem> genererItemsRegion() {
         List<ConcertListeItem> liste = new ArrayList<ConcertListeItem>();
-        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","22/01/2017","S.E.V.R.A.N"));
-        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","23/03/2017","S.E.V.R.A.N"));
+        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","22/01/2017","Toulouse"));
+        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","23/03/2017","Narbonne"));
         return liste;
     }
     public List<ConcertListeItem> genererItemsFrance() {
         List<ConcertListeItem> liste = new ArrayList<ConcertListeItem>();
-        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","22/01/2017","S.E.V.R.A.N"));
-        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","23/03/2017","S.E.V.R.A.N"));
-        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","24/04/2017","S.E.V.R.A.N"));
-        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","25/06/2017","S.E.V.R.A.N"));
+        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","22/01/2017","Paris"));
+        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","23/03/2017","Bordeaux"));
+        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","24/04/2017","Lille"));
+        liste.add(new ConcertListeItem(R.drawable.sevran, "Kaaris","25/06/2017","Tours"));
         return liste;
     }
     @Override

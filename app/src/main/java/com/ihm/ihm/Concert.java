@@ -13,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -42,6 +44,32 @@ public class Concert extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        ImageView img = (ImageView) findViewById(R.id.imageView4);
+        img.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent i = new Intent(Concert.this, Artiste.class);
+                startActivity(i);            }
+        });
+        Button btn = (Button) findViewById(R.id.button12);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Concert.this, Paiement.class);
+                startActivity(i);
+            }
+        });
+
+        Button btn1 = (Button) findViewById(R.id.button);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Concert.this, Avis.class);
+                startActivity(i);
+            }
+        });
     }
 
 
@@ -129,6 +157,11 @@ public class Concert extends AppCompatActivity
     }
     public void vers_avis (View view) {
         Intent i = new Intent(this, Avis.class);
+        startActivity(i);
+    }
+
+    public void vers_paiement (View view) {
+        Intent i = new Intent(this, Paiement.class);
         startActivity(i);
     }
 }

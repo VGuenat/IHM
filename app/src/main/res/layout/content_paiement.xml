@@ -51,15 +51,6 @@
         android:layout_below="@+id/button5"
         android:layout_alignStart="@+id/textView16" />
 
-    <Button
-        android:text="Utiliser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button5"
-        android:layout_alignBaseline="@+id/textView16"
-        android:layout_alignBottom="@+id/textView16"
-        android:layout_alignEnd="@+id/textView14" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -150,6 +141,17 @@
         android:layout_marginBottom="39dp"
         android:id="@+id/button8"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+         />
+
+    <Button
+        android:text="Utiliser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button5"
+        android:layout_alignBaseline="@+id/textView16"
+        android:layout_alignBottom="@+id/textView16"
+        android:layout_alignEnd="@+id/button8"
+         />
 
 </RelativeLayout>
