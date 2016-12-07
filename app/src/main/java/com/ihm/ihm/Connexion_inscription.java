@@ -21,6 +21,7 @@ public class Connexion_inscription extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Connexion_inscription.this, Accueil.class);
+                i.putExtra("Connected",true);
                 startActivity(i);
             }
         });
@@ -30,6 +31,7 @@ public class Connexion_inscription extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Connexion_inscription.this, Accueil.class);
+                i.putExtra("Connected",true);
                 startActivity(i);
             }
         });

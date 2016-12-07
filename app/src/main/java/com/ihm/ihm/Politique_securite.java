@@ -40,7 +40,10 @@ public class Politique_securite extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.accueil, menu);
+        if (getIntent().getBooleanExtra("Connected",false))
+            getMenuInflater().inflate(R.menu.menu_connecte, menu);
+        else
+            getMenuInflater().inflate(R.menu.accueil, menu);
         return true;
     }
 
@@ -52,7 +55,12 @@ public class Politique_securite extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_mon_profil) {
+        if (id == R.id.action_connection_inscription) {
+            Intent i = new Intent(this, Connexion_inscription.class);
+            startActivity(i);
+            return true;
+        }
+        else if (id == R.id.action_mon_profil) {
             Intent i = new Intent(this, Mon_profil.class);
             startActivity(i);
             return true;
@@ -86,17 +94,25 @@ public class Politique_securite extends AppCompatActivity
             Intent i = new Intent(this, Accueil.class);
             startActivity(i);
         } else if (id == R.id.nav_profil) {
-            Intent i = new Intent(this, Mon_profil.class);
-            startActivity(i);
+            if (getIntent().getBooleanExtra("Connected",false)) {
+                Intent i = new Intent(this, Mon_profil.class);
+                startActivity(i);
+            }
         } else if (id == R.id.nav_panier) {
-            Intent i = new Intent(this, Mon_panier.class);
-            startActivity(i);
+            if (getIntent().getBooleanExtra("Connected",false)) {
+                Intent i = new Intent(this, Mon_panier.class);
+                startActivity(i);
+            }
         } else if (id == R.id.nav_historique) {
-            Intent i = new Intent(this, Mon_historique.class);
-            startActivity(i);
+            if (getIntent().getBooleanExtra("Connected",false)) {
+                Intent i = new Intent(this, Mon_historique.class);
+                startActivity(i);
+            }
         } else if (id == R.id.nav_notif) {
-            Intent i = new Intent(this, Mes_notifications.class);
-            startActivity(i);
+            if (getIntent().getBooleanExtra("Connected",false)) {
+                Intent i = new Intent(this, Mes_notifications.class);
+                startActivity(i);
+            }
         } else if (id == R.id.nav_politique) {
             Intent i = new Intent(this, Politique_securite.class);
             startActivity(i);
