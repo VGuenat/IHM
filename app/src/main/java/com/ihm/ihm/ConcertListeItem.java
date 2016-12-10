@@ -1,10 +1,5 @@
 package com.ihm.ihm;
 
-/**
- * Created by Vincent on 05/12/2016.
- * Représente un élément des listes des pages notifications, historique, panier et résultat de
- * recherche, entre autres.
- */
 
 class ConcertListeItem {
     private int image;

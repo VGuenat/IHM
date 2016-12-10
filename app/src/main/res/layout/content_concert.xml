@@ -25,7 +25,7 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="Acheter un billet"
+        android:text="@string/acheter_billet2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView4"
@@ -35,7 +35,7 @@
          />
 
     <TextView
-        android:text="Informations sur le concert et sur la salle"
+        android:text="@string/information_salle_prix"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/button12"
@@ -45,7 +45,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis turpis urna, vel faucibus purus laoreet quis. Curabitur accumsan sed turpis non tristique. Nullam moles"
+        android:text="@string/infos_texte"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView26"
@@ -53,7 +53,7 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="Avis des personnes ayant assistées au concert"
+        android:text="@string/avis_personnes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView26"
@@ -63,8 +63,9 @@
         android:id="@+id/textView27" />
 
     <Button
-        android:text="Je donne mon avis !"
+        android:text="@string/button_donner_avis"
         android:layout_width="wrap_content"
+        android:contentDescription="@string/button_donner_avis"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:id="@+id/button"

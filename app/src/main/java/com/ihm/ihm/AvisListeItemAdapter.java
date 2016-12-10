@@ -11,9 +11,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by Florian.BADENS on 07/12/2016.
- */
+
 
 class AvisListeItemAdapter extends ArrayAdapter<AvisListeItem> {
 

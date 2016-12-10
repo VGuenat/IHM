@@ -38,7 +38,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/liste_resultats_france"
-            android:text="@string/list_header_france"/>
+            android:contentDescription="@string/en_france"
+            android:text="@string/en_france"/>
 
         <ListView
             android:layout_weight="1"

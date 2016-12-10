@@ -27,7 +27,7 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="Votre avis sur ce concert nous intéresse"
+        android:text="@string/votre_avis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView2"
@@ -58,7 +58,7 @@
         android:id="@+id/ratingBar3" />
 
     <TextView
-        android:text="Jeu de scène"
+        android:text="@string/jeu_scène"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ratingBar2"
@@ -67,7 +67,7 @@
         android:id="@+id/textView9" />
 
     <TextView
-        android:text="Ambiance"
+        android:text="@string/ambiance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="19dp"
@@ -76,7 +76,7 @@
         android:layout_toEndOf="@+id/textView4" />
 
     <TextView
-        android:text="Qualité Sonore"
+        android:text="@string/qualité_sonore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView7"
@@ -94,12 +94,13 @@
         android:layout_below="@+id/ratingBar3"
         android:layout_alignEnd="@+id/ratingBar3"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        android:hint="Ajouter un commentaire"
+        android:hint="@string/ajout_commentaire"
         android:inputType="text|textMultiLine"
          />
 
     <Button
-        android:text="Valider"
+        android:text="@string/button_valider"
+        android:contentDescription="@string/button_valider"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button2"

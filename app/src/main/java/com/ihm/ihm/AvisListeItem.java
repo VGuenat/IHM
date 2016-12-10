@@ -1,8 +1,6 @@
 package com.ihm.ihm;
 
-/**
- * Created by Florian.BADENS on 07/12/2016.
- */
+
 
 class AvisListeItem {
     private int image;

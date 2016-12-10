@@ -74,4 +74,60 @@ Integer dictum lacus ultricies lectus vehicula, ac faucibus odio pulvinar. Aliqu
         <item>6</item>
     </string-array>
 
+    <string name="label_accueil">Les prochains concerts</string>
+    <string name="button_achat_billet">Utiliser la carte enregistrée</string>
+    <string name="emplacement">Emplacement</string>
+    <string name="acheter_billet">Acheter vos billets</string>
+    <string name="quantite">Quantité :</string>
+    <string name="dans_region">Dans votre région</string>
+    <string name="suivre_artiste">Suivre l'artiste</string>
+    <string name="en_france">En France</string>
+    <string name="votre_avis">Votre avis sur ce concert nous intéresse</string>
+    <string name="ambiance">Ambiance</string>
+    <string name="jeu_scène">Jeu de scène</string>
+    <string name="qualité_sonore">Qualité Sonore</string>
+    <string name="ajout_commentaire">Ajouter un commentaire</string>
+    <string name="button_valider">Valider</string>
+    <string name="acheter_billet2">Acheter un billet</string>
+    <string name="information_salle_prix">Informations sur le concert et sur la salle</string>
+    <string name="infos_texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis turpis urna, vel faucibus purus laoreet quis. Curabitur accumsan sed turpis non tristique. Nullam moles</string>
+    <string name="avis_personnes">Avis des personnes ayant assistées au concert</string>
+    <string name="button_donner_avis">Je donne mon avis !</string>
+    <string name="artiste_suivis">Artiste(s) que vous suivez</string>
+    <string name="label_donner_avis">Donner un avis sur les concerts</string>
+    <string name="semaine_prochaine">La semaine prochaine</string>
+    <string name="mois_prochain">Le mois prochain</string>
+    <string name="prénom">Prénom</string>
+    <string name="email">E-mail</string>
+    <string name="nom">Nom</string>
+    <string name="accessibilite">Accessiblité</string>
+    <string name="perimetre">Périmètre de recherche</string>
+    <string name="artiste_suivi">Artiste(s) suivi(s)</string>
+    <string name="mot2passe">Mot de passe</string>
+    <string name="moyens_paiement">Moyens de paiement</string>
+    <string name="button_gerer">Gérer</string>
+    <string name="button_appliquer">Appliquer ces modifications</string>
+    <string name="carte_enregistre">Carte(s) enregistrée(s)</string>
+    <string name="carte1">58** **** **** ****</string>
+    <string name="carte2">73** **** **** ****</string>
+
+    <string name="button_utiliser">Utiliser</string>
+    <string name="label_ajouter_carte">Ajouter une carte</string>
+    <string name="button_ajouter_carte">Ajouter la carte et Payer</string>
+    <string name="button_rechercher">Ajouter une carte</string>
+    <string name="label_smart">Smart Search</string>
+    <string name="label_barre_recherche1">Artiste, concert, date</string>
+    <string name="label_recherche_approfondi">Recherche approfondie</string>
+
+
+
+
+
+
+
+
+
+
+
+
 </resources>

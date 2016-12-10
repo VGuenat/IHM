@@ -22,7 +22,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/liste_panier_semaine"
-            android:text="@string/list_header_next_week"/>
+            android:contentDescription="@string/semaine_prochaine"
+            android:text="@string/semaine_prochaine"/>
 
         <ListView
             android:layout_weight="3"
@@ -36,7 +37,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/liste_panier_mois"
-            android:text="@string/list_header_next_month"/>
+            android:contentDescription="@string/mois_prochain"
+            android:text="@string/mois_prochain"/>
 
         <ListView
             android:layout_weight="3"

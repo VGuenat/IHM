@@ -17,7 +17,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/header_notifications"
-        android:text="Les prochains concerts"/>
+        android:text="@string/label_accueil"
+        android:contentDescription="@string/label_accueil"/>
+
 
     <ListView
         android:layout_width="match_parent"

@@ -11,11 +11,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by Vincent on 05/12/2016.
- * Sert d'adapter pour la ListView. DOIT ÊTRE MODIFIÉ POUR PRENDRE EN COMPTE LES 2 LISTES SUR LA
- * MÊME PAGE !
- */
+
 
 class ConcertListeItemAdapter extends ArrayAdapter<ConcertListeItem> {
 

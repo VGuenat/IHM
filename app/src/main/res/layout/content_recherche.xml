@@ -14,7 +14,8 @@
     tools:showIn="@layout/app_bar_recherche">
 
     <Button
-        android:text="@string/bouton_recherche"
+        android:text="@string/button_rechercher"
+        android:contentDescription="@string/bouton_recherche"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/bouton_recherche"
@@ -24,7 +25,8 @@
         android:layout_marginBottom="22dp" />
 
     <TextView
-        android:text="Smart Search"
+        android:text="@string/label_smart"
+        android:contentDescription="@string/label_smart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -46,7 +48,8 @@
         android:ems="10"
         android:layout_marginTop="19dp"
         android:id="@+id/recherche_smart"
-        android:hint="Artiste, concert, date"
+        android:hint="@string/label_barre_recherche1"
+        android:contentDescription="@string/label_barre_recherche1"
         android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true" />
 
@@ -100,7 +103,8 @@
          />
 
     <TextView
-        android:text="Recherche approfondie"
+        android:text="@string/label_recherche_approfondi"
+        android:contentDescription="@string/label_recherche_approfondi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/recherche_smart"

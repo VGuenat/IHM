@@ -13,9 +13,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by Florian.BADENS on 06/12/2016.
- */
+
 
 class GererListeItemAdapter extends ArrayAdapter<GererListeItem> {
 

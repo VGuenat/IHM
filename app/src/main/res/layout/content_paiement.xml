@@ -15,7 +15,7 @@
 
 
     <TextView
-        android:text="Moyens de paiement"
+        android:text="@string/moyens_paiement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView14"
@@ -24,7 +24,7 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="Carte(s) enregistrée(s)"
+        android:text="@string/carte_enregistre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView14"
@@ -34,7 +34,7 @@
         android:id="@+id/textView15" />
 
     <TextView
-        android:text="58** **** **** ****"
+        android:text="@string/carte1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView15"
@@ -43,7 +43,7 @@
         android:id="@+id/textView16" />
 
     <TextView
-        android:text="73** **** **** ****"
+        android:text="@string/carte2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -117,7 +117,7 @@
     </LinearLayout>
 
     <Button
-        android:text="Utiliser"
+        android:text="@string/button_utiliser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button6"
@@ -126,7 +126,7 @@
         android:layout_alignStart="@+id/button5" />
 
     <TextView
-        android:text="Ajouter une carte"
+        android:text="@string/label_ajouter_carte"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView18"
@@ -135,7 +135,7 @@
         android:layout_alignStart="@+id/textView15" />
 
     <Button
-        android:text="Ajouter la carte et Payer"
+        android:text="@string/button_ajouter_carte"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="39dp"
@@ -145,7 +145,8 @@
          />
 
     <Button
-        android:text="Utiliser"
+        android:text="@string/button_utiliser"
+        android:contentDescription="@string/button_utiliser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button5"

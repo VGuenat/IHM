@@ -14,7 +14,7 @@
     tools:showIn="@layout/app_bar_mon_profil">
 
     <TextView
-        android:text="Mon profil"
+        android:text="title_activity_mon_historique"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -31,7 +31,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="17dp"
         android:id="@+id/editText"
-        android:hint="Prénom" />
+        android:contentDescription="@string/prénom"
+        android:hint="@string/prénom" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -49,7 +50,8 @@
         android:id="@+id/editText4"
         android:layout_below="@+id/editText3"
         android:layout_alignStart="@+id/editText3"
-        android:hint="E-mail" />
+        android:contentDescription="@string/email"
+        android:hint="@string/email" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -59,10 +61,11 @@
         android:id="@+id/editText3"
         android:layout_below="@+id/editText"
         android:layout_alignStart="@+id/editText"
-        android:hint="Nom" />
+        android:contentDescription="@string/nom"
+        android:hint="@string/nom" />
 
     <Switch
-        android:text="Accessiblité"
+        android:text="@string/accessibilite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView21"
@@ -72,7 +75,8 @@
         android:id="@+id/switch1" />
 
     <TextView
-        android:text="Périmètre de recherche"
+        android:text="@string/perimetre"
+        android:contentDescription="@string/perimetre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView20"
@@ -92,7 +96,8 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="Artiste(s) suivi(s)"
+        android:text="@string/artiste_suivi"
+        android:contentDescription="@string/artiste_suivi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView23"
@@ -106,12 +111,14 @@
         android:ems="10"
         android:id="@+id/editText5"
         android:inputType="textPassword"
-        android:hint="Mot de passe"
+        android:hint="@string/mot2passe"
+        android:contentDescription="@string/mot2passe"
         android:layout_below="@+id/editText4"
         android:layout_alignStart="@+id/editText4" />
 
     <TextView
-        android:text="Moyens de paiement"
+        android:text="@string/moyens_paiement"
+        android:contentDescription="@string/moyens_paiement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView22"
@@ -120,7 +127,8 @@
         android:layout_alignStart="@+id/editText5" />
 
     <Button
-        android:text="Gérer"
+        android:text="@string/button_gerer"
+        android:contentDescription="@string/button_gerer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button7"
@@ -129,7 +137,8 @@
         android:onClick="vers_paiement" />
 
     <Button
-        android:text="Gérer"
+        android:text="@string/button_gerer"
+        android:contentDescription="@string/button_gerer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button9"
@@ -138,7 +147,8 @@
         android:onClick="vers_gerer_artiste" />
 
     <Button
-        android:text="Aplliquer ces modifications"
+        android:text="@string/button_appliquer"
+        android:contentDescription="@string/button_appliquer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button10"

@@ -17,7 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/header_notifications"
-        android:text="@string/list_header_notifications"/>
+        android:contentDescription="@string/label_donner_avis"
+        android:text="@string/label_donner_avis"/>
 
     <ListView
         android:layout_width="match_parent"
