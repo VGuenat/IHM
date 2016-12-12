@@ -114,7 +114,7 @@ Integer dictum lacus ultricies lectus vehicula, ac faucibus odio pulvinar. Aliqu
     <string name="button_utiliser">Utiliser</string>
     <string name="label_ajouter_carte">Ajouter une carte</string>
     <string name="button_ajouter_carte">Ajouter la carte et Payer</string>
-    <string name="button_rechercher">Ajouter une carte</string>
+    <string name="button_rechercher">Rechercher</string>
     <string name="label_smart">Smart Search</string>
     <string name="label_barre_recherche1">Artiste, concert, date</string>
     <string name="label_recherche_approfondi">Recherche approfondie</string>

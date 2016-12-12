@@ -117,7 +117,7 @@
     </LinearLayout>
 
     <Button
-        android:text="@string/button_utiliser"
+        android:text="Supprimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button6"
@@ -135,7 +135,7 @@
         android:layout_alignStart="@+id/textView15" />
 
     <Button
-        android:text="@string/button_ajouter_carte"
+        android:text="Ajouter la carte"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="39dp"
@@ -145,14 +145,14 @@
          />
 
     <Button
-        android:text="@string/button_utiliser"
+        android:text="Supprimer"
         android:contentDescription="@string/button_utiliser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button5"
         android:layout_alignBaseline="@+id/textView16"
         android:layout_alignBottom="@+id/textView16"
-        android:layout_alignEnd="@+id/button8"
-         />
+        android:layout_toEndOf="@+id/textView16"
+        android:layout_marginStart="37dp" />
 
 </RelativeLayout>

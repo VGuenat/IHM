@@ -59,7 +59,7 @@ public class Paiement extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Context context = getApplicationContext();
-                CharSequence text = "Billet acheté !";
+                CharSequence text = "Carte supprimée";
                 int duration = Toast.LENGTH_SHORT;
 
                 Toast toast = Toast.makeText(context, text, duration);
@@ -75,7 +75,7 @@ public class Paiement extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Context context = getApplicationContext();
-                CharSequence text = "Billet acheté !";
+                CharSequence text = "Carte supprimée";
                 int duration = Toast.LENGTH_SHORT;
 
                 Toast toast = Toast.makeText(context, text, duration);
@@ -91,7 +91,7 @@ public class Paiement extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Context context = getApplicationContext();
-                CharSequence text = "Carte ajoutée et billet acheté !";
+                CharSequence text = "Carte ajoutée";
                 int duration = Toast.LENGTH_SHORT;
 
                 Toast toast = Toast.makeText(context, text, duration);
